@@ -17,5 +17,11 @@ pipeline {
                 sh "ssh -p 5679 toor@127.0.0.1 'hostname'"
             }
         }
+
+        stage("Second stage"){
+            steps{
+                sh "ssh -p 5679 toor@127.0.0.1 'uptime'"
+            }
+        }
     }
 }
